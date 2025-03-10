@@ -76,6 +76,10 @@
     }
   },
   "lint-staged" : {
+    "**/*.{txt}" : [
+      "echo 'pre-commit'",
+      "prettier --write"
+    ],
     "src/**/*.{ts}" : [
       "echo 'pre-commit'",
       "eslint --ext .tsx --ext .ts src/",
